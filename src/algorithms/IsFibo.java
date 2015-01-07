@@ -56,7 +56,6 @@ public class IsFibo {
         //main loop breaker
         while (true) {
 
-            newFibo = nextFibo(previousFibo, currentFibo);
 
             if (newFibo > input) {
 
@@ -76,9 +75,14 @@ public class IsFibo {
         }
     }
 
-    public static long nextFibo(long f1,long f2){
 
-        return  f1 + f2;
+
+    public static long getFibo(long fib){
+
+        if(fib == 1 || fib ==2)
+            return 1;
+
+        return  getFibo(fib-1) + getFibo(fib-2);
     }
 
 
